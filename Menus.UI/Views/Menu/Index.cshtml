@@ -1,0 +1,60 @@
+﻿@{
+	ViewData["Title"] = "Menus";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card card-info">
+	<div class="card-header">
+		<h3 class="text-center">CREAR HORARIO</h3>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col">
+				<input type="hidden" id="id_menu" value="" />
+				<label>Coach:</label>
+				<input type="text" class="form-control" placeholder="Coach" id="menu_coach" name="menu_coach">
+			</div>
+			<div class="col">
+				<label>Alumno:</label>
+				<input type="text" class="form-control" placeholder="Alumno" id="menu_alumno" name="menu_alumno">
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col">
+				<label>Ejercicio:</label>
+				<input type="text" class="form-control" placeholder="Ejercicio" id="menu_ejer" name="menu_ejer">
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-6">
+				<label>Fecha:</label>
+				<input type="datetime-local" class="form-control" id="menu_fecha" name="menu_fecha">
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="col-md-6">
+				<button id="btnsave" class="btn btn-success btn-sm">Guardar</button>
+				<button id="btnAddnew" class="btn btn-primary btn-sm">Limpiar Datos</button>
+			</div>
+		</div>
+		<br />
+		<table id="tblmenu" class="table table-striped table-bordered" style="width: 100%">
+			<thead>
+				<tr>
+					<th class="d-none">id_menu</th>
+					<th>Coach</th>
+					<th>Alumno</th>
+					<th>Ejercicio</th>
+					<th>Fecha</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+</div>
+@section Scripts {
+	<script src="~/js/Menu/Menu.js"></script>
+}
